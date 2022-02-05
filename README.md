@@ -12,12 +12,12 @@ Two separate .NET systems are set up to validate MD5 keys (or SHA1 etc) from a d
 - Searched in stack overflow by filtering using tags like md5 and C# with some keywords like inconsistency.
 - I got 2 reasons for it.
 #### Reasons
- - Non ASCII character issue : 
- There is a chance for getting non ASCII character in the string and it will not be properly validated in a Linux Machine.
-A chance for  version control Git messes up with non-ascii characters on Linux.
-For example, string contains a character like £ which corresponds to the Windows-1252 encoding. In Linux system displays � because it is not a valid UTF-8 encoding.
-Solution : We should configure Visual Studio to use UTF-8 instead of Windows-1252.
-- Size if the data and system performance: 
+ - Non-ASCII character issue : 
+ There is a chance for getting a non-ASCII character in the string and it is not properly validated in a Linux Machine.
+A chance for version control Git messes up with non-ASCII characters on Linux.
+For example, a string contains a character like £ which corresponds to the Windows-1252 encoding. In Linux system displays � because it is not a valid UTF-8 encoding.
+Solution: We should configure Visual Studio to use UTF-8 instead of Windows-1252.
+- Size of the data and system performance: 
 The MD5 hash of some data will be exactly the same as a second MD5 hash of exactly the same data, regardless of the size of that data. The only problem with MD5 for large files is that, in some cases, you might get the same hash for two different files.
 #### Spent Time - 30 Minutes
 
@@ -28,7 +28,7 @@ The code below is used in an ASP.NET application where ”GreetingService.Curren
 
 ----
 ### The Problem-Solving Process
-Its a logical question and easy to come to the output.
+It's a logical question and was easy to come to the output.
 
 #### Answer
 - 08 - Good morning
@@ -38,6 +38,18 @@ Its a logical question and easy to come to the output.
 ----
 ## Task 3
 Entity Framework is used to fetch data from a table in a database and display the result with a text header that shows the total number of rows returned in the result. Which of the following versions would you suggest, and why?
+
+### The Problem-Solving Process
+I already have experience with entity framework LINQ and used IQueryable Count and List Count.
+IQueryable count is executing and taking count from the database server itself ( `SELECT * FROM MyTable` ). But when we call toList, it will do the execution on the database server-side and return the results as rows, then C# will materialize all the resulting entities as a list of .Net objects. After that, the count execution is happening in the C# side using the LINQ list.
+
+In the case of performance, toList will take all data to the client-side, and performing count method execution needs extra code execution and it will make issues in performance in the case of large data.
+But if execute it on the database side, it will be faster and we no need to fetch the entire result and the returned response data size is also too low(it will be Int32 with the number of rows).
+
+#### Answer
+Obviously, if you are only looking for a count of myTable then I would suggest **version 2**, here don't need to call toList because it requires more resources.
+#### Spent Time - 10 Minutes
+----
 
 ## Task 4 (optional for backend position)
 Take a look at the following badly written page. Please rewrite this with similar functionality but in a modern way. Focus is on a good and modern structure rather then replicating the functionality exactly.
