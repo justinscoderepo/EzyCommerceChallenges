@@ -26,6 +26,16 @@ The MD5 hash of some data will be exactly the same as a second MD5 hash of exact
 ## Task 2
 The code below is used in an ASP.NET application where ”GreetingService.CurrentGreeting” is fetched at the following times: 08, 12 and 16. Which message is returned on each run?
 
+----
+### The Problem-Solving Process
+Its a logical question and easy to come to the output.
+
+#### Answer
+- 08 - Good morning
+- 12 - Good evening
+- 16 - Good evening
+#### Spent Time - 5 Minutes
+----
 ## Task 3
 Entity Framework is used to fetch data from a table in a database and display the result with a text header that shows the total number of rows returned in the result. Which of the following versions would you suggest, and why?
 
