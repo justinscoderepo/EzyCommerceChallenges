@@ -53,7 +53,12 @@ Obviously, if you are only looking for a count of myTable then I would suggest *
 
 ## Task 4 (optional for backend position)
 Take a look at the following badly written page. Please rewrite this with similar functionality but in a modern way. Focus is on a good and modern structure rather then replicating the functionality exactly.
+#### Process
+Started reading Vue.js documentation for 1 hour and started creating frontend using Vue.js and tailwind.
 
+Code available in https://github.com/justinscoderepo/EzyCommerceChallenges/tree/main/ReadListVueJS
+#### Spent Time - 3 Hours
+----
 ##
 ## Task 5
 Create a web page with a button. When you click on the button the application should retrieve the currency rates for USD and EUR and display them on the page. Please use *dotnet core* for backend and a modern JS framework for frontend. Please think of how you structure your code on both backend and frontend.
