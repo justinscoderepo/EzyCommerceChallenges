@@ -75,3 +75,14 @@ Or other feed you can find would work.
 
 
 Use: good practices and architecture, clean solution, dotnet backend, async calls, VueJS (or Angular/React to bind data)
+
+#### Process
+Implemented the backend using .Net Core C#.
+its running in port 5000.
+Code available in https://github.com/justinscoderepo/EzyCommerceChallenges/tree/main/CurrencyRateApplication/BE
+#### Spent Time - 8 Hours
+
+Implemented the backend using VueJS and tailwind.
+Instead of get results button, I used a currency filter( commented the button ).
+Code available in https://github.com/justinscoderepo/EzyCommerceChallenges/tree/main/CurrencyRateApplication/FE
+#### Spent Time - 8 Hours
